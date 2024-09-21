@@ -13,6 +13,10 @@
 
 <style>
   div {
+    /* So that it fits the parent #header div that is part of the layout */
+    width: 100%;
+    height: 100%;
+
     display: grid;
     grid-template-columns: 1fr auto;
     grid-area: ". content";
@@ -23,13 +27,8 @@
 
   ul {
     grid-column-start: -1;
-  }
-
-  ul li {
-    display: inline;
-  }
-
-  li {
-    padding: 10px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
   }
 </style>

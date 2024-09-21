@@ -4,7 +4,7 @@
   import HeaderContent from "$lib/HeaderContent.svelte";
 </script>
 
-<div id="page" class="h-screen overflow-hidden">
+<div id="page">
   <div id="sidebar" class="bg-lime-600 p-2">
     <SidebarContent></SidebarContent>
   </div>
@@ -13,7 +13,7 @@
     <HeaderContent></HeaderContent>
   </div>
 
-  <div id="main" class="overflow-scroll">
+  <div id="main">
     <slot></slot>
   </div>
 </div>
@@ -26,7 +26,10 @@
 
   #page {
     /* Margin must be 0 for overflow: hidden to work; */
+    width: 100vw;
+    height: 100vh;
     margin: 0px;
+    overflow: hidden;
 
     /* Grid Layout */
     display: grid;
@@ -46,5 +49,6 @@
   }
   #main {
     grid-area: main;
+    overflow: scroll;
   }
 </style>
