@@ -50,5 +50,6 @@
   #main {
     grid-area: main;
     overflow: scroll;
+    /* Do not add margin here or the scrollbar will shift inside */
   }
 </style>
